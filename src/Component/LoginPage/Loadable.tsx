@@ -5,7 +5,7 @@ const LazyComponent = lazy(() =>
   import("./index").then((module) => ({ default: module.LoginPage }))
 );
 
-export function LoadingPage(props: any) {
+export const LoginPage = (props: any) => {
   return (
     <Suspense fallback={<p>loading...</p>}>
       <LazyComponent {...props} />
